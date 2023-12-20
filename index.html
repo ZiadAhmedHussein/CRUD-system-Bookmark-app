@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <!-- linked font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ##### -->
+  <!-- linked fontawesome icon -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- ###### -->
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ###### -->
+  <!-- link mystyle sheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- ###### -->
+</head>
+<body>
+  <section class="bg-danger min-vh-100 py-5 position-relative">
+    <div class="container">
+      <h1 class="text-center fw-bolder mb-5">Bookmarker</h1>
+      <div class="content-form py-4 border-top border-bottom d-flex flex-column gap-4" >
+        <h3 class="text-center">
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h3>
+        <div class="bookmark-name d-flex flex-column gap-3">
+          <div class="lable">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <label for="bookmark-name" class="ms-2 fw-bold">Site Name</label>
+          </div>
+          <input class="form-control" id="bookmark-name" type="text" placeholder="Bookmark Name">
+        </div>
+        <div class="bookmark-url d-flex flex-column gap-3">
+          <div class="lable">
+            <i class="fa-solid fa-link"></i>
+            <label for="bookmark-url" class="ms-2 fw-bold">Site URL</label>
+          </div>
+          <input class="form-control" id="bookmark-url" type="text" placeholder="Bookmark Name">
+        </div>
+        <button class="btn btn-dark w-25 mx-auto" onclick="createBookmark()" > Submit </button>
+      </div>
+      <table class="content-result-table w-100 bg-info mt-3">
+        <thead class="text-center border-bottom">
+          <th class="py-3">Index</th>
+          <th class="py-3">Website Name</th>
+          <th class="py-3">Visit</th>
+          <th class="py-3">Delete</th>
+        </thead>
+        <tbody id="result-rows" class="text-center">
+          <!-- <tr>
+            <td class="py-3">youvdf</td>
+            <td class="py-3">sdfgdf</td>
+            <td class="py-3">
+              <a href="">
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>Visit</span>
+                </button>
+              </a>
+            </td>
+            <td class="py-3">
+              <a href="">
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="fa-solid fa-trash-can"></i>
+                  <span>Delete</span>
+                </button>
+              </a>
+            </td>
+
+          </tr> -->
+        </tbody>
+
+      </table>
+    </div>
+    <div id="validation-popup" class="popup bg-opacity-50 bg-black position-absolute align-items-center justify-content-center top-0 start-0 w-100 h-100 d-none">
+      <div class="popup-card w-50 h-auto  d-flex flex-column gap-3 p-4 bg-light rounded">
+        <div class="popup-close d-flex align-items-center justify-content-between">
+          <ul class="circles-color d-flex align-items-center gap-3 list-unstyled">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+          </ul>
+          <i class="fa-solid fa-xmark" onclick="appearValidationPopup ()"></i>
+        </div>
+        <h4>
+          Site Name or Url is not valid, Please follow the rules below :
+        </h4>
+        <ul class="list-unstyled">
+          <li class="d-flex align-items-center gap-3">
+            <i class="fa-regular fa-circle-right text-danger"></i>
+            <p class="m-0 lead ">Site name must contain at least 3 characters</p>
+          </li>
+          <li class="d-flex align-items-center gap-3">
+            <i class="fa-regular fa-circle-right text-danger"></i>
+            <p class="m-0 lead ">Site URL must be a valid one</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  <!-- link my js-code -->
+  <script src="js/main.js"></script>
+  <!-- ########## -->
+  
+</body>
+</html>
